@@ -74,7 +74,7 @@
 <script>
     $(document).ready(function(){
         $.get(
-        "https://raw.github.com/omdl/omdl/master/conceptual.md",
+        "docs/conceptual.md",
         function(data){
             var converter = new Showdown.converter();
             var html = converter.makeHtml(data);
