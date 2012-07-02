@@ -1,4 +1,4 @@
-# Logigal Level OMDL #
+# Logical Level OMDL #
 
 At the logical level, the OMDL is used to define types of widgets and rules that have to match during runtime.
 
