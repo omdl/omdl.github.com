@@ -7,7 +7,7 @@ OMDL can be used to describe a mashup in conceptual terms without reference to s
 ## Specification
 
     <?xml version="1.0"?>
-    <workspace xmlns="http://www.ict-omelette.eu/vocab/mdl/"
+    <workspace xmlns="http://omdl.org"
                xmlns:dc="http://purl.org/dc/elements/1.1/">
       <goal>{GOAL^^xsd:string}</goal>
       <status date="{DATETIME^^xsd:dateTime}">{STATUS^^xsd:string}</status>
@@ -21,7 +21,7 @@ OMDL can be used to describe a mashup in conceptual terms without reference to s
 ## Example
 
     <?xml version="1.0"?>
-    <workspace xmlns="http://www.ict-omelette.eu/vocab/mdl/"
+    <workspace xmlns="http://omdl.org"
                xmlns:dc="http://purl.org/dc/elements/1.1/">
       <goal>Show plumbers in Berlin on a map and let me call them.</goal>
       <status date="2012-07-02T15:57+02:00">to be reviewed</status>
