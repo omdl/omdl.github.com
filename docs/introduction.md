@@ -2,6 +2,10 @@
 
 OMDL uses XML documents to represent mashups, including the workspace, layouts, and included widgets. 
 
+## Namespace
+
+OMDL documents use the namespace http://omdl.org
+
 ## the `<workspace>` element ##
 
 The `<workspace>` element is the root element of the whole workspace, which contains all further elements. 
