@@ -21,7 +21,9 @@ OMDL can be used to describe a mashup in conceptual terms without reference to s
 
 ### the `workspace` element
 
-Any elements can be used for the workspace - see [introduction](documentation.html)
+At conceptual level the `<layout>`, `<theme>` and `<source>` elements are not used.
+
+Any other elements can be used for the workspace - see [introduction](documentation.html). 
 
 ### the `widget` element
 
