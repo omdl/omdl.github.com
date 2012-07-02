@@ -45,7 +45,7 @@ Example:
     </workspace>
     
     
-## the `<layout>` element ##
+### the `<layout>` element ###
 
 The layout defines the structure of the workspace.
 
@@ -55,7 +55,7 @@ For example "TWO COLUMNS WIDE NARROW" would indicate a layout with two columns, 
 
 However, applications may ignore the layout, or apply the column numbers but not column layout hints.
 
-## the `<status>` element ##
+### the `<status>` element ###
 
 The current status of the workspace. It contains the following attribute:
 
