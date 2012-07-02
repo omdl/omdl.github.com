@@ -1,7 +1,7 @@
 # Conceptual Level OMDL #
 
-At the conceptual level, the OMDL can be used to describe a mashup in abstract terms without reference to 
-specific widgets and layouts. 
+At the conceptual level, the OMDL is used to describe the overall purpose of the workspace and the associated user goals in abstract 
+terms without reference to specific widgets and layouts.
 
 ## Specification
 
