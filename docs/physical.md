@@ -47,13 +47,17 @@ theme and Cascading Style Sheets (CSS) statements.
 
 ## Elements and Attributes
 
-### `<workspace>`
+### `<workspace>` <div style="color: red; font-size: 50%">conceptual</div> 
 
 Workspace as the foundation for creating mashups from widgets
+
+*Supported in Phase:* Conceptual, Logical, Physical
 
 ### `<goal>`
 
 Definition of the user goal in natural language following a defined syntax.
+
+*Supported in Phase:* Conceptual, Logical, Physical
 
 ### `<status>`
 
@@ -63,22 +67,34 @@ Current status of the workspace.
 
 `@date` the date of the current status, e.g. when the document was flagged as published, in progess or withdrawn.
 
+*Supported in Phase:* Conceptual, Logical, Physical
+
 ### `<dc:identifier>`
 
 Unique identifier of the workspace represented by a URI linking to the workspace within a repository.
+
+*Supported in Phase:* Conceptual, Logical, Physical
 
 ### `<dc:title>`
 
 Name of the workspace.
 
+*Supported in Phase:* Conceptual, Logical, Physical
+
 ### `<dc:description>`
 
 Textual description of the workspace's functionality.
+
+*Supported in Phase:* Conceptual, Logical, Physical
 
 ### `<dc:creator>`
 
 Author of the workspace respresented by a URI linking to the user of a certain user repository.
 
+*Supported in Phase:* Conceptual, Logical, Physical
+
 ### `<dc:date>`
 
 Date of the last modification of the workspace.
+
+*Supported in Phase:* Conceptual, Logical, Physical
