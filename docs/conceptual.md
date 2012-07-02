@@ -1,8 +1,7 @@
 # Conceptual Level OMDL #
 
-OMDL can be used to describe a mashup in conceptual terms without reference to specific widgets and layouts. 
-
-## Introduction
+At the conceptual level, the OMDL can be used to describe a mashup in abstract terms without reference to 
+specific widgets and layouts. 
 
 ## Specification
 
@@ -38,42 +37,38 @@ OMDL can be used to describe a mashup in conceptual terms without reference to s
 
 ## Elements and Attributes
 
-### `workspace`
+### `<workspace>`
 
 Workspace as the foundation for creating mashups from widgets
 
-### `goal`
+### `<goal>`
 
 Definition of the user goal in natural language following a defined syntax.
 
-### `status`
+### `<status>`
 
 Current status of the workspace. 
 
-*Attribute:*
+*Attributes:*
 
 `@date` the date of the current status, e.g. when the document was flagged as published, in progess or withdrawn.
 
-*Example:*
-
-      <status date="2012-07-01T16:35+45:00">published</status>
-
-### `dc:identifier`
+### `<dc:identifier>`
 
 Unique identifier of the workspace represented by a URI linking to the workspace within a repository.
 
-### `dc:title`
+### `<dc:title>`
 
 Name of the workspace.
 
-### `dc:description`
+### `<dc:description>`
 
 Textual description of the workspace's functionality.
 
-### `dc:creator`
+### `<dc:creator>`
 
 Author of the workspace respresented by a URI linking to the user of a certain user repository.
 
-### `dc:date`
+### `<dc:date>`
 
 Date of the last modification of the workspace.
