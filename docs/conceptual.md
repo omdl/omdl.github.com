@@ -32,36 +32,14 @@ OMDL can be used to describe a mashup in conceptual terms without reference to s
       <dc:date>2012-07-03T14:23+37:00</dc:date>     
     </workspace>
 
-## Elements and Attributes
+## Elements and Attributes used at conceptual level
 
-### workspace
+### the `workspace` element
 
-The workspace is the foundation for creating mashups from widgets
+Any elements can be used for the workspace - see [introduction](documentation.html)
 
-### goal
+### the `widget` element
 
-Definition of the user goal in natural language following a defined syntax.
+At conceptual level, the following elements and attributes can be used for widgets:
 
-### status
-
-Current status of the workspace description.
-
-### dc:identifier
-
-Globally unique identifier of the workspace represented by a URI linking to the workspace within a repository.
-
-### dc:title
-
-Name of the workspace.
-
-### dc:description
-
-Textual description of the workspace's functionality.
-
-### dc:creator
-
-Author of the workspace respresented by a URI linking to the user of a certain user repository.
-
-### dc:date
-
-Date of the last modification of the workspace.
+TODO list widget child elements here
