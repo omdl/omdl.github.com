@@ -23,7 +23,7 @@ OMDL can be used to describe a mashup in conceptual terms without reference to s
     <?xml version="1.0"?>
     <workspace xmlns="http://www.ict-omelette.eu/vocab/mdl/"
                xmlns:dc="http://purl.org/dc/elements/1.1/">
-      <goal>Show plumpers in Berlin on a map and let me call them.</goal>
+      <goal>Show plumbers in Berlin on a map and let me call them.</goal>
       <status date="2012-07-02T15:57+02:00">to be reviewed</status>
       <dc:identifier>{REPO-URI}</dc:identifier>
       <dc:title>{NAME}</dc:title>
