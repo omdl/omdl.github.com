@@ -111,52 +111,51 @@ theme and Cascading Style Sheets (CSS) statements.
 
 ### `<workspace>`
 
-Workspace as the foundation for creating mashups from widgets
+*Keywords:* `#conceptual` `#logical` `#physical` `#mandatory`
 
-*Supported in Phase:* Conceptual, Logical, Physical
+Workspace as the foundation for creating mashups from widgets.
 
 ### `<goal>`
 
-Definition of the user goal in natural language following a defined syntax.
+*Keywords:* `#conceptual` `#logical` `#physical` `#mandatory`
 
-*Supported in Phase:* Conceptual, Logical, Physical
+Definition of the user goal in natural language following a defined syntax.
 
 ### `<status>`
 
-Current status of the workspace. 
+*Keywords:* `#conceptual` `#logical` `#physical` `#mandatory`
 
-*Attributes:*
+Current status of the workspace. 
 
 `@date` the date of the current status, e.g. when the document was flagged as published, in progess or withdrawn.
 
-*Supported in Phase:* Conceptual, Logical, Physical
-
 ### `<dc:identifier>`
+
+*Keywords:* `#conceptual` `#logical` `#physical` `#mandatory`
 
 Unique identifier of the workspace represented by a URI linking to the workspace within a repository.
 
-*Supported in Phase:* Conceptual, Logical, Physical
-
 ### `<dc:title>`
+
+*Keywords:* `#conceptual` `#logical` `#physical` `#mandatory`
 
 Name of the workspace.
 
-*Supported in Phase:* Conceptual, Logical, Physical
 
 ### `<dc:description>`
 
-Textual description of the workspace's functionality.
+*Keywords:* `#conceptual` `#logical` `#physical` `#mandatory`
 
-*Supported in Phase:* Conceptual, Logical, Physical
+Textual description of the workspace's functionality.
 
 ### `<dc:creator>`
 
-Author of the workspace respresented by a URI linking to the user of a certain user repository.
+*Keywords:* `#conceptual` `#logical` `#physical` `#mandatory`
 
-*Supported in Phase:* Conceptual, Logical, Physical
+Author of the workspace respresented by a URI linking to the user of a certain user repository.
 
 ### `<dc:date>`
 
-Date of the last modification of the workspace.
+*Keywords:* `#conceptual` `#logical` `#physical` `#mandatory`
 
-*Supported in Phase:* Conceptual, Logical, Physical
+Date of the last modification of the workspace.
