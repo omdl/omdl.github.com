@@ -10,10 +10,10 @@ terms without reference to specific widgets and layouts.
                xmlns:dc="http://purl.org/dc/elements/1.1/">
       <goal>{GOAL^^xsd:string}</goal>
       <status date="{DATETIME^^xsd:dateTime}">{STATUS^^xsd:string}</status>
-      <dc:identifier>{REPO-URI}</dc:identifier>
+      <dc:identifier>{HTTP-URI-TO-THE-WORKSPACE}</dc:identifier>
       <dc:title>{NAME^^xsd:string}</dc:title>
       <dc:description>{DESCRIPTION^^xsd:string}</dc:description>
-      <dc:creator>{USER-URI}</dc:creator>     
+      <dc:creator>{HTTP-URI-TO-THE-USER-PROFILE}</dc:creator>     
       <dc:date>{DATETIME^^xsd:dateTime}</dc:date>  
     </workspace>
     
