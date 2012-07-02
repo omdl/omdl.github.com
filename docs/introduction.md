@@ -72,3 +72,24 @@ Widget definition of one widget in the workspace. The Logical Design uses abstra
 Attributes:
 
 `@id` The unique id of the widget is represented by the id attribute. Its scope is limited to the coresponding workspace.
+
+### the `<type>` element ###
+
+The type or category of widget, as a string. For example, "chat", "weather", "map" etc.
+
+### the `<identifier>` element ###
+
+The globally unique identifier of a widget, for example an IRI for a W3C Widget package.
+
+### the `<source>` element ###
+
+A HTTP-URI linking to the widget in a repository; for example, the download location for a `.wgt` file or the location of an OpenSocial `gadget.xml`.
+
+### the `<position>` element ###
+
+A string providing a placement hint for the widget. A placement hint consists of one or both of the following keywords:
+
+* one of TOP, MIDDLE, BOTTOM for the vertical placement
+* one of LEFT, MIDDLE, RIGHT for the horizontal placement
+
+For example "TOP LEFT", "BOTTOM", "MIDDLE MIDDLE"
