@@ -15,16 +15,39 @@ theme and Cascading Style Sheets (CSS) statements.
                xmlns:dc="http://purl.org/dc/elements/1.1/">
       <goal>{GOAL^^xsd:string}</goal>
       <status date="{DATETIME^^xsd:dateTime}">{STATUS^^xsd:string}</status>
-      <dc:identifier>{HTTP-URI-TO-THE-WORKSPACE}</dc:identifier>
+      
+      <dc:identifier>{HTTP-URI-TO-WORKSPACE}</dc:identifier>
       <dc:title>{NAME^^xsd:string}</dc:title>
       <dc:description>{DESCRIPTION^^xsd:string}</dc:description>
-      <dc:creator>{HTTP-URI-TO-THE-USER-PROFILE}</dc:creator>     
+      <dc:creator>{HTTP-URI-TO-USER-PROFILE}</dc:creator>     
       <dc:date>{DATETIME^^xsd:dateTime}</dc:date>  
-      <dc:source>{HTTP-URI-TO-THE-CONCEPTUAL-DESIGN-DOCUMENT}</dc:source>
-      <widget>
-        <type></type>
+      <dc:source>{HTTP-URI-TO-CONCEPTUAL-DESIGN-DOCUMENT}</dc:source>
+
+      <widget+ id="{UNIQUE-WIDGET-ID-IN-WORKSPACE}">
+        <type>{MAP|VOICE|VIDEO|LIST|SMS|CHAT|...}</type>
+        <source>{HTTP-URI-TO-WIDGET-REPOSITORY}</source>
+        <position>{TOP|MIDDLE|BOTTOM}{LEFT|CENTER|RIGHT}</position>
       </widget>
-      
+
+      <qos?>
+         <bandwidth?>{MINIMAL-BITRATE^^xsd:integer}</bandwith>
+         <latency? mandatory="{TRUE|FALSE}">{MAXIMAL-MILLISECONDS^^xsd:integer}</latency>
+         <gps? mandatory="{TRUE|FALSE}" accuracy="{MAX-RADIUS-IN-METERS^^xsd:integer}"/>
+      </qos>
+
+      <ruleset* connective="{AND|OR}">
+        <rule+ language="{LANGUAGE^^xsd:string}">{SOURCE-CODE^^xsd:string}</rule>
+      </ruleset>
+
+      <layout>{X-COLUMNS|X-ROWS|GRID|FLOW}</layout>
+      <theme?>{LABEL^^xsd:string}</theme>
+      <stylesheet?>{HTTP-URI-TO-CSS-FILE}</stylesheet>
+
+      <phaseout>
+        <date>{DEADLINE^^xsd:dateTime}</date>
+        <holdback? unit="{HOUR|DAY|MONTH|YEAR}">{VALUE^^xsd:integer}</holdback>
+        <location? type="{TYPE-OF-DATA-REPOSITOY^^xsd:integer}">{HTTP-URI-TO-DATA-DOWNLOAD}</location>
+      </phaseout>
     </workspace>
     
 ## Example
@@ -33,8 +56,9 @@ theme and Cascading Style Sheets (CSS) statements.
     <workspace xmlns="http://www.ict-omelette.eu/vocab/mdl/"
                xmlns:dc="http://purl.org/dc/elements/1.1/">
       <goal>Show plumpers in Berlin on a map and let me call them.</goal>
-      <status date="2012-07-02T15:57+02:00">to be reviewed</status>
-      <dc:identifier>http://repo.omdl.org/mashups/alice/3</dc:identifier>
+      <status date="2012-07-02T15:57+02:00">physical design done</status>
+      
+      <dc:identifier>http://repo.omdl.org/mashups/alice/CallFromMap</dc:identifier>
       <dc:title>Call Service from Map</dc:title>
       <dc:description>
         Mashup to show user-defined services for a user-defined location on a map.
@@ -42,12 +66,50 @@ theme and Cascading Style Sheets (CSS) statements.
         a facility to directly call the service.
       </dc:description>
       <dc:creator>http://repo.omdl.org/people/alice.rdf#me</dc:creator>
-      <dc:date>2012-07-03T14:23+37:00</dc:date>     
+      <dc:date>2012-07-03T14:23+37:00</dc:date>
+      
+      <widget id="http://repo.omdl.org/mashups/alice/CallFromMap/1">
+        <type>MAP</type>
+        <source>http://repo.omdl.org/widgets/map/MyFancyMap</source>
+        <position>TOPLEFT</position>
+      </widget>
+      <widget id="http://repo.omdl.org/mashups/alice/CallFromMap/2">
+        <type>LIST</type>
+        <source>http://repo.omdl.org/widgets/list/ResultInfo</source>
+        <position>TOPRIGHT</position>
+      </widget>
+      <widget id="http://repo.omdl.org/mashups/alice/CallFromMap/3">
+        <type>VOICE</type>
+        <source>http://repo.omdl.org/widgets/list/CallItForMe</source>
+        <position>BOTTOMRIGHT</position>
+      </widget>
+
+      <qos>
+         <bandwidth>128</bandwith>
+         <latency mandatory="true">200</latency>
+         <gps mandatory="true" accuracy="100"/>
+      </qos>
+
+      <ruleset connective="and">
+        <rule language="javascript">
+           {context.Date}.getUTCHours() >= 4 || {context.Date}.getUTCHours() <= 2
+        </rule>
+        <rule language="javascript">{context.Client}.location == 'DE'/rule>
+      </ruleset>
+
+      <layout>grid</layout>
+      <stylesheet>http://repo.omdl.org/mashups/alice/3/_data/special.css</stylesheet>
+
+      <phaseout>
+        <date>2015-01-01T01:00+00:00</date>
+        <holdback unit="month">1</holdback>
+        <location type="archive">http://repo.omdl.org/mashups/oldschool/location>
+      </phaseout>
     </workspace>
 
 ## Elements and Attributes
 
-### `<workspace>` <div style="color: red; font-size: 50%">conceptual</div> 
+### `<workspace>`
 
 Workspace as the foundation for creating mashups from widgets
 
