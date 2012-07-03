@@ -4,7 +4,7 @@ During the conceptual design, the workspace will be defined. A bunch of metadata
 and on behalf of developers, talks with the management. The company management normally does not have a deep understanding and interest in technical details. They just want to discuss the overall purpose of such a workspace and get an overview of the embedded 
 features and its goals, that is, they want to understand the concept. 
 
-## Specification
+## Structure
 
     <?xml version="1.0"?>
     <workspace xmlns="http://www.ict-omelette.eu/vocab/mdl/"
