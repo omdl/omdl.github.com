@@ -94,7 +94,7 @@ theme and Cascading Style Sheets (CSS) statements.
         <rule language="javascript">
            {context.Date}.getUTCHours() >= 4 || {context.Date}.getUTCHours() <= 2
         </rule>
-        <rule language="javascript">{context.Client}.location == 'DE'/rule>
+        <rule language="javascript">{context.Client}.location == 'DE'</rule>
       </ruleset>
 
       <layout>grid</layout>
