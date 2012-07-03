@@ -8,7 +8,7 @@ evaluated a suitable platform during runtime. All specified elements have to be 
 Additionally, styling information for the whole workspace and widget specific ones can be set. These are split into layout, 
 theme and Cascading Style Sheets (CSS) statements. 
 
-## Specification
+## Structure
 
     <?xml version="1.0"?>
     <workspace xmlns="http://www.ict-omelette.eu/vocab/mdl/"
