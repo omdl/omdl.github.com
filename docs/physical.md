@@ -244,7 +244,7 @@ Optional specification of the minimal bandwidth in kbit/s that have to be availa
 Optional specification of the maximal allowed latency in milliseconds. The latency value is an integer.
 
 *Attributes:*
-`@mandatory` Defines if non-compliance has to be treated as critical. Is A valid value is either true or false.
+`@mandatory` Defines if non-compliance has to be treated as critical. Is A valid value is either 'true' or 'false'.
 
 *Parent element:* `<qos>`
 
@@ -255,7 +255,7 @@ Optional specification of the maximal allowed latency in milliseconds. The laten
 Optional specification of the minimal valid accuracy as a radius in meters the subject is located in. The accuracy value is an integer.
 
 *Attributes:*
-`@mandatory` Defines if non-compliance has to be treated as critical. Is A valid value is either true or false.
+`@mandatory` Defines if non-compliance has to be treated as critical. A valid value is either 'true' or 'false'.
 
 *Parent element:* `<qos>`
  
@@ -267,7 +267,7 @@ Optional frame element containing rules or combination of rules associated to th
 The `<ruleset>` element is optinal, can be cascaded, i.e. the `<ruleset>` is allowed to have a `<ruleset>` child element, and can occur several times the 2. level (child level).
 
 *Attributes:*
-`@connective` Sets how the rules within the ruleset have to be evaluated, i.e. have all rules within a ruleset be fulfilled ('and' combination) or just one ('or' combination). Valid values are either 'and' or 'or'.
+`@connective` Sets how the rules within the ruleset have to be evaluated, i.e. have all rules within a ruleset be fulfilled ('and' combination) or just one ('or' combination). Valid values are 'and' or 'or'.
 
 *Parent element:* `<workspace>`
 
@@ -286,7 +286,7 @@ Rule that has to be fulfilled in order to run the mashup. The rule have to be wr
 
 *Keywords:* `#physical`
 
-Layout of the workspace. Valid values are either 'x-columns', 'x-rows', 'grid' or 'flow'.
+Layout of the workspace. Valid values are 'x-columns', 'x-rows', 'grid' or 'flow'.
 
 *Parent element:* `<workspace>`
 
@@ -305,3 +305,41 @@ Optional theme to be used for the workspace. Valid values are ___TODO___
 Optional stylesheet to be used for the workspace. The stylesheet has to be referenced by a URI.
 
 *Parent element:* `<workspace>`
+
+### `<phaseout>`
+
+*Keywords:* `#physical`
+
+Frame element containing data related to the phase out of the mashup.
+
+*Parent element:* `<workspace>`
+
+### `<date>`
+
+*Keywords:* `#physical`
+
+Date of the phase out of the mashup. Value has to be of type datetime.
+
+*Parent element:* `<phaseout>`
+
+### `<holdback>`
+
+*Keywords:* `#physical` `#optinal`
+
+Optional duration the mashup has to be hold back from automatic removal. The value is an integer.
+
+*Attributes:*
+`@unit` Unit of the duration. Valid values are 'hour', 'day', 'month' or 'year'.
+
+*Parent element:* `<phaseout>`
+
+### `<location>`
+
+*Keywords:* `#physical` `#optinal`
+
+Optional URI the mashup has to be archived to before automatic removal at deadline. Deadline is calculated from date and holdback time.
+
+*Attributes:*
+`@type` Type of the location; in most caes 'archive'. The value is a string.
+
+*Parent element:* `<phaseout>`
