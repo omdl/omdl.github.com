@@ -4,7 +4,7 @@ In the logical design phase, the user goals of the conceptual design will be eva
 intermediate step between an abstract description of the workspace and a  composed one with widgets and additional settings. It includes abstract definitions of widgets and rules that have to match during runtime. Legal constraints are taken into account as well as several other restrictions, like a time-based or region-based access policy. This phase leads to a quick overview which widget types apply and allows easily to change it. The user does not need a deep understanding of the technical details or programming skills. Its aim is to create an initial set-up of used widget types to achieve the desired functionality. The logical design 
 could be an intermediate format that is not displayed to the user.
 
-## Specification
+## Structure
 
     <?xml version="1.0"?>
     <workspace xmlns="http://www.ict-omelette.eu/vocab/mdl/"
