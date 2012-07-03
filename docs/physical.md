@@ -179,11 +179,10 @@ Date of the last modification of the workspace.
 *Keywords:* `#logical` `#physical` `#mandatory`
 
 URI to the workspace description of the previous design phase, i.e. 
-- if in logical design phase, then con
+- if currently in logical design phase, then URI to document of conceptual phase
+- if currently in physical design phase, then URI to document of logical phase
 
 *Parent element:* `<workspace>`
-
-<dc:source>{HTTP-URI-TO-DOCUMENT-OF-THE-PREVIOUS-DESIGN-PHASE}</dc:source>
 
 ### `<widget>`
 
@@ -260,3 +259,25 @@ Optional specification of the minimal valid accuracy as a radius in meters the s
 
 *Parent element:* `<qos>`
  
+### `<ruleset>`
+
+*Keywords:* `#logical` `#physical` `#optional`
+
+Optional frame element containing rules or combination of rules associated to the mashup or contained widgets. 
+The `<ruleset>` element is optinal, can be cascaded, i.e. the `<ruleset>` is allowed to have a `<ruleset>` child element, and can occur several times the 2. level (child level).
+
+*Attributes:*
+`@connective` Sets how the rules within the ruleset have to be evaluated, i.e. have all rules within a ruleset be fulfilled ('and' combination) or just one ('or' combination). Valid values are either 'and' or 'or'.
+
+*Parent element:* `<workspace>`
+
+### `<rule>`
+
+*Keywords:* `#logical` `#physical` `#optional`
+
+Rule that has to be fulfilled in order to run the mashup. The rule have to be written in natural language during the logical design and in a programming language during the physical design. At least one `rule` element has to be present within a `ruleset`.
+
+*Attributes:*
+`@language` Language the rule is written in. Should be 'text' in the logical phase and 'javascript' in the physical phase.
+
+*Parent element:* `<ruleset>`
