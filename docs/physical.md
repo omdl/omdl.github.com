@@ -192,8 +192,8 @@ URI to the workspace description of the previous design phase, i.e.
 Definition of a widget in the workspace. The `<widget>` element can occur once or several times.
 
  *Attributes:*
-`@id` Unique identifier of the widget is represented by a link to the widget within a widget repository. This attribute is allowed
-to occur in the physical phase.
+`@id` Unique identifier of the widget is represented by a link to the widget within the workspace environment. This attribute is allowed
+to occur only in the physical phase.
 
 *Parent element:* `<workspace>`
 
@@ -203,20 +203,60 @@ to occur in the physical phase.
 
 Type of the widget. Valid content values are: `map`, `voice`, `video`, `list`, `sms`, `chat` 
 
- *Parent element:* `<widget>`
+*Parent element:* `<widget>`
 
 ### `<source>`
 
 *Keywords:* `#physical` `#mandatory`
 
-Type of the widget. Valid content values are: `map`, `voice`, `video`, `list`, `sms`, `chat` 
+URI of the widget source.
 
- *Parent element:* `<widget>`
+*Parent element:* `<widget>`
  
- ### `<position>`
+### `<position>`
 
 *Keywords:* `#physical` `#mandatory`
 
-Type of the widget. Valid content values are: `map`, `voice`, `video`, `list`, `sms`, `chat` 
+Position of the widget in a 3x3 grid. Valid combination statements: (top, middle, bottom) X (left, center, right)
+For instance: topleft, bottomright
 
- *Parent element:* `<widget>`
+*Parent element:* `<widget>`
+ 
+### `<qos>`
+
+*Keywords:* `#physical` `#optional`
+
+Optional frame element containing quality of service criteria, which have to be fulfilled in order to run the mashup.
+
+*Parent element:* `<workspace>`
+ 
+### `<bandwidth>`
+
+*Keywords:* `#physical` `#optional`
+
+Optional specification of the minimal bandwidth in kbit/s that have to be available. The bandwidth value is an integer.
+
+*Parent element:* `<qos>`
+ 
+### `<latency>`
+
+*Keywords:* `#physical` `#optional`
+
+Optional specification of the maximal allowed latency in milliseconds. The latency value is an integer.
+
+*Attributes:*
+`@mandatory` Defines if non-compliance has to be treated as critical. Is A valid value is either true or false.
+
+*Parent element:* `<qos>`
+
+### `<gps>`
+
+*Keywords:* `#physical` `#optional`
+
+Optional specification of the minimal valid accuracy as a radius in meters the subject is located in. The accuracy value is an integer.
+
+*Attributes:*
+`@mandatory` Defines if non-compliance has to be treated as critical. Is A valid value is either true or false.
+
+*Parent element:* `<qos>`
+ 
