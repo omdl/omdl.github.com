@@ -273,7 +273,7 @@ The `<ruleset>` element is optinal, can be cascaded, i.e. the `<ruleset>` is all
 
 ### `<rule>`
 
-*Keywords:* `#logical` `#physical` `#optional`
+*Keywords:* `#logical` `#physical`
 
 Rule that has to be fulfilled in order to run the mashup. The rule have to be written in natural language during the logical design and in a programming language during the physical design. At least one `rule` element has to be present within a `ruleset`.
 
@@ -281,3 +281,27 @@ Rule that has to be fulfilled in order to run the mashup. The rule have to be wr
 `@language` Language the rule is written in. Should be 'text' in the logical phase and 'javascript' in the physical phase.
 
 *Parent element:* `<ruleset>`
+
+### `<layout>`
+
+*Keywords:* `#physical`
+
+Layout of the workspace. Valid values are either 'x-columns', 'x-rows', 'grid' or 'flow'.
+
+*Parent element:* `<workspace>`
+
+### `<theme>`
+
+*Keywords:* `#physical` `#optional`
+
+Optional theme to be used for the workspace. Valid values are ___TODO___
+
+*Parent element:* `<workspace>`
+
+### `<stylesheet>`
+
+*Keywords:* `#physical` `#optional`
+
+Optional stylesheet to be used for the workspace. The stylesheet has to be referenced by a URI.
+
+*Parent element:* `<workspace>`
