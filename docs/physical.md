@@ -21,7 +21,7 @@ theme and Cascading Style Sheets (CSS) statements.
       <dc:description>{DESCRIPTION^^xsd:string}</dc:description>
       <dc:creator>{HTTP-URI-TO-USER-PROFILE}</dc:creator>     
       <dc:date>{DATETIME^^xsd:dateTime}</dc:date>  
-      <dc:source>{HTTP-URI-TO-CONCEPTUAL-DESIGN-DOCUMENT}</dc:source>
+      <dc:source>{HTTP-URI-TO-DOCUMENT-OF-THE-PREVIOUS-DESIGN-PHASE}</dc:source>
 
       <widget+ id="{UNIQUE-WIDGET-ID-IN-WORKSPACE}">
         <type>{MAP|VOICE|VIDEO|LIST|SMS|CHAT|...}</type>
@@ -174,6 +174,17 @@ Date of the last modification of the workspace.
 
 *Parent element:* `<workspace>`
 
+### `<dc:source>`
+
+*Keywords:* `#logical` `#physical` `#mandatory`
+
+URI to the workspace description of the previous design phase, i.e. 
+- if in logical design phase, then con
+
+*Parent element:* `<workspace>`
+
+<dc:source>{HTTP-URI-TO-DOCUMENT-OF-THE-PREVIOUS-DESIGN-PHASE}</dc:source>
+
 ### `<widget>`
 
 *Keywords:* `#logical` `#physical` `#mandatory`
@@ -194,3 +205,18 @@ Type of the widget. Valid content values are: `map`, `voice`, `video`, `list`, `
 
  *Parent element:* `<widget>`
 
+### `<source>`
+
+*Keywords:* `#physical` `#mandatory`
+
+Type of the widget. Valid content values are: `map`, `voice`, `video`, `list`, `sms`, `chat` 
+
+ *Parent element:* `<widget>`
+ 
+ ### `<position>`
+
+*Keywords:* `#physical` `#mandatory`
+
+Type of the widget. Valid content values are: `map`, `voice`, `video`, `list`, `sms`, `chat` 
+
+ *Parent element:* `<widget>`
