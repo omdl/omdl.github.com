@@ -121,13 +121,18 @@ Workspace as the foundation for creating mashups from widgets.
 
 Definition of the user goal in natural language following a defined syntax.
 
+*Parent element:* `<workspace>`
+
 ### `<status>`
 
 *Keywords:* `#conceptual` `#logical` `#physical` `#mandatory`
 
 Current status of the workspace. 
 
+*Attributes:*
 `@date` the date of the current status, e.g. when the document was flagged as published, in progess or withdrawn.
+
+*Parent element:* `<workspace>`
 
 ### `<dc:identifier>`
 
@@ -135,12 +140,15 @@ Current status of the workspace.
 
 Unique identifier of the workspace represented by a URI linking to the workspace within a repository.
 
+*Parent element:* `<workspace>`
+
 ### `<dc:title>`
 
 *Keywords:* `#conceptual` `#logical` `#physical` `#mandatory`
 
 Name of the workspace.
 
+*Parent element:* `<workspace>`
 
 ### `<dc:description>`
 
@@ -148,14 +156,41 @@ Name of the workspace.
 
 Textual description of the workspace's functionality.
 
+*Parent element:* `<workspace>`
+
 ### `<dc:creator>`
 
 *Keywords:* `#conceptual` `#logical` `#physical` `#mandatory`
 
 Author of the workspace respresented by a URI linking to the user of a certain user repository.
 
+*Parent element:* `<workspace>`
+
 ### `<dc:date>`
 
 *Keywords:* `#conceptual` `#logical` `#physical` `#mandatory`
 
 Date of the last modification of the workspace.
+
+*Parent element:* `<workspace>`
+
+### `<widget>`
+
+*Keywords:* `#logical` `#physical` `#mandatory`
+
+Definition of a widget in the workspace. The `<widget>` element can occur once or several times.
+
+ *Attributes:*
+`@id` Unique identifier of the widget is represented by a link to the widget within a widget repository. This attribute is allowed
+to occur in the physical phase.
+
+*Parent element:* `<workspace>`
+
+### `<type>`
+
+*Keywords:* `#logical` `#physical` `#mandatory`
+
+Type of the widget. Valid content values are: `map`, `voice`, `video`, `list`, `sms`, `chat` 
+
+ *Parent element:* `<widget>`
+
