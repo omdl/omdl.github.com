@@ -41,7 +41,7 @@ features and its goals, that is, they want to understand the concept.
 
     <?xml version="1.0"?>
     <workspace xmlns="http://omdl.org/">
-      <goal>Show plumpers in Berlin on a map and let me call them.</goal>
+      <goal>Show plumbers in Berlin on a map and let me call them.</goal>
       <status date="2012-07-01T13:57+02:00">conceptual design done</status>
       
       <identifier>http://repo.omdl.org/mashups/alice/CallFromMap</identifier>
@@ -89,7 +89,7 @@ could be an intermediate format that is not displayed to the user.
 
     <?xml version="1.0"?>
     <workspace xmlns="http://omdl.org/">
-      <goal>Show plumpers in Berlin on a map and let me call them.</goal>
+      <goal>Show plumbers in Berlin on a map and let me call them.</goal>
       <status date="2012-07-02T13:57+02:00">logical design done</status>
       
       <identifier>http://repo.omdl.org/mashups/alice/CallFromMap</identifier>
@@ -173,7 +173,7 @@ theme and Cascading Style Sheets (CSS) statements.
 
     <?xml version="1.0"?>
     <workspace xmlns="http://omdl.org/">
-      <goal>Show plumpers in Berlin on a map and let me call them.</goal>
+      <goal>Show plumbers in Berlin on a map and let me call them.</goal>
       <status date="2012-07-02T15:57+02:00">physical design done</status>
       
       <identifier>http://repo.omdl.org/mashups/alice/CallFromMap</identifier>
