@@ -387,7 +387,7 @@ Optional specification of the minimal valid accuracy as a radius in meters the s
 *Keywords:* `#logical` `#physical` `#optional`
 
 Optional frame element containing rules or combination of rules associated to the mashup or contained widgets. 
-The `<ruleset>` element is optinal, can be cascaded, i.e. the `<ruleset>` is allowed to have a `<ruleset>` child element, and can occur several times the 2. level (child level).
+The `<ruleset>` element is optional, can be cascaded, i.e. the `<ruleset>` is allowed to have a `<ruleset>` child element, and can occur several times the 2. level (child level).
 
 *Attributes:*
 `@connective` Sets how the rules within the ruleset have to be evaluated, i.e. have all rules within a ruleset be fulfilled ('AND' combination) or just one ('OR' combination). Valid values are 'AND' or 'OR'.
@@ -444,7 +444,7 @@ Frame element containing data related to the phase out of the mashup.
 
 ### `<holdback>`
 
-*Keywords:* `#physical` `#optinal`
+*Keywords:* `#physical` `#optional`
 
 Optional duration the mashup has to be hold back from automatic removal. The value is an integer.
 
@@ -455,7 +455,7 @@ Optional duration the mashup has to be hold back from automatic removal. The val
 
 ### `<location>`
 
-*Keywords:* `#physical` `#optinal`
+*Keywords:* `#physical` `#optional`
 
 Optional URI the mashup has to be archived to before automatic removal at deadline. Deadline is calculated from date and holdback time.
 
