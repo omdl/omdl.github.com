@@ -25,7 +25,7 @@ features and its goals, that is, they want to understand the concept.
 #### Structure of OMDL at the Conceptual Level
 
     <?xml version="1.0"?>
-    <workspace xmlns="http://www.ict-omelette.eu/vocab/mdl/">
+    <workspace xmlns="http://omdl.org">
       <goal>{GOAL^^xsd:string}</goal>
       <status date="{DATETIME^^xsd:dateTime}">{STATUS^^xsd:string}</status>
       
