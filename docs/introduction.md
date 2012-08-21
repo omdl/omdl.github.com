@@ -1,12 +1,12 @@
 # Introduction #
 
-OMDL uses XML documents to represent mashups, including the workspace, layouts, and included widgets, at different stages of the design process.
+OMDL uses XML documents to represent mashups, including the workspace, layouts, and included apps, at different stages of the design process.
 
 At the _conceptual_ level, OMDL can be used to describe the overall purpose of a mashup, for example as a set of user requirements.
 
-At the _logical_ level, OMDL can be used to describe a general mashup structure, including the type of widgets to be used.
+At the _logical_ level, OMDL can be used to describe a general mashup structure, including the type of apps to be used.
 
-At the _physical_ level, OMDL is used to exchange the implementation of a mashup, including specific widgets, layouts and theming.
+At the _physical_ level, OMDL is used to exchange the implementation of a mashup, including specific apps, layouts and theming.
 
 ## Namespace
 
@@ -58,8 +58,8 @@ features and its goals, that is, they want to understand the concept.
 	
 ### Logical level OMDL
 	
-In the logical design phase, the user goals of the conceptual design will be evaluated and replaced by abstract widget definitions. It is closely related to the conceptual design but both phases are independent of each other. The logical design document is an 
-intermediate step between an abstract description of the workspace and a  composed one with widgets and additional settings. It includes abstract definitions of widgets and rules that have to match during runtime. Legal constraints are taken into account as well as several other restrictions, like a time-based or region-based access policy. This phase leads to a quick overview which widget types apply and allows easily to change it. The user does not need a deep understanding of the technical details or programming skills. Its aim is to create an initial set-up of used widget types to achieve the desired functionality. The logical design 
+In the logical design phase, the user goals of the conceptual design will be evaluated and replaced by abstract app definitions. It is closely related to the conceptual design but both phases are independent of each other. The logical design document is an 
+intermediate step between an abstract description of the workspace and a  composed one with apps and additional settings. It includes abstract definitions of apps and rules that have to match during runtime. Legal constraints are taken into account as well as several other restrictions, like a time-based or region-based access policy. This phase leads to a quick overview which app types apply and allows easily to change it. The user does not need a deep understanding of the technical details or programming skills. Its aim is to create an initial set-up of used app types to achieve the desired functionality. The logical design 
 could be an intermediate format that is not displayed to the user.
 
 #### Structure of OMDL at the Logical Level
@@ -76,9 +76,9 @@ could be an intermediate format that is not displayed to the user.
       <date>{DATETIME^^xsd:dateTime}</date>  
       <source>{HTTP-URI-TO-DOCUMENT-OF-THE-PREVIOUS-DESIGN-PHASE}</source>
 
-      <widget+">
+      <app+">
         <type>{MAP|VOICE|VIDEO|LIST|SMS|CHAT|...}</type>
-      </widget>
+      </app>
 
       <ruleset* connective="{AND|OR}">
         <rule+ language="{LANGUAGE^^xsd:string}">{TEXT^^xsd:string}</rule>
@@ -102,15 +102,15 @@ could be an intermediate format that is not displayed to the user.
       <creator>http://repo.omdl.org/people/alice.rdf#me</creator>
       <date>2012-07-02T14:23+37:00</date>
       
-      <widget>
+      <app>
         <type>MAP</type>
-      </widget>
-      <widget>
+      </app>
+      <app>
         <type>LIST</type>
-      </widget>
-      <widget>
+      </app>
+      <app>
         <type>VOICE</type>
-      </widget>
+      </app>
 
       <ruleset connective="and">
         <rule language="text">The mashup is only allowed to be used within 4 am and 2 am CET</rule>
@@ -123,10 +123,10 @@ could be an intermediate format that is not displayed to the user.
 	
 While in the conceptual and logical design phase no real implementation was considered, the physical design is the only phase 
 that is directly related to the runtime environment. The workspace is created for the runtime, i.e., all abstract definitions 
-of the logical design will be replaced, e.g., with widgets, which are available in the widget repository. Furthermore, the 
+of the logical design will be replaced, e.g., with apps, which are available in the app repository. Furthermore, the 
 rules of the physical design are transformed into executable ones; these are based on JavaScript objects which have to be 
 evaluated a suitable platform during runtime. All specified elements have to be interprete by the runtime environment.
-Additionally, styling information for the whole workspace and widget specific ones can be set. These are split into layout, 
+Additionally, styling information for the whole workspace and app specific ones can be set. These are split into layout, 
 theme and Cascading Style Sheets (CSS) statements. 
 
 #### Structure of OMDL at the Physical Level
@@ -143,11 +143,11 @@ theme and Cascading Style Sheets (CSS) statements.
       <date>{DATETIME^^xsd:dateTime}</date>  
       <source>{HTTP-URI-TO-DOCUMENT-OF-THE-PREVIOUS-DESIGN-PHASE}</source>
 
-      <widget+ id="{UNIQUE-WIDGET-ID-IN-WORKSPACE}">
+      <app+ id="{UNIQUE-WIDGET-ID-IN-WORKSPACE}">
         <type>{MAP|VOICE|VIDEO|LIST|SMS|CHAT|...}</type>
         <source>{HTTP-URI-TO-WIDGET-REPOSITORY}</source>
         <position>{TOP|MIDDLE|BOTTOM}{LEFT|CENTER|RIGHT}</position>
-      </widget>
+      </app>
 
       <capabilities?>
          <bandwidth?>{MINIMAL-BITRATE^^xsd:integer}</bandwith>
@@ -186,21 +186,21 @@ theme and Cascading Style Sheets (CSS) statements.
       <creator>http://repo.omdl.org/people/alice.rdf#me</creator>
       <date>2012-07-03T14:23+37:00</date>
       
-      <widget id="http://repo.omdl.org/mashups/alice/CallFromMap/1">
+      <app id="http://repo.omdl.org/mashups/alice/CallFromMap/1">
         <type>MAP</type>
-        <source>http://repo.omdl.org/widgets/map/MyFancyMap</source>
+        <source>http://repo.omdl.org/apps/map/MyFancyMap</source>
         <position>TOPLEFT</position>
-      </widget>
-      <widget id="http://repo.omdl.org/mashups/alice/CallFromMap/2">
+      </app>
+      <app id="http://repo.omdl.org/mashups/alice/CallFromMap/2">
         <type>LIST</type>
-        <source>http://repo.omdl.org/widgets/list/ResultInfo</source>
+        <source>http://repo.omdl.org/apps/list/ResultInfo</source>
         <position>TOPRIGHT</position>
-      </widget>
-      <widget id="http://repo.omdl.org/mashups/alice/CallFromMap/3">
+      </app>
+      <app id="http://repo.omdl.org/mashups/alice/CallFromMap/3">
         <type>VOICE</type>
-        <source>http://repo.omdl.org/widgets/list/CallItForMe</source>
+        <source>http://repo.omdl.org/apps/list/CallItForMe</source>
         <position>BOTTOMRIGHT</position>
-      </widget>
+      </app>
 
       <capabilities>
          <bandwidth>128</bandwith>
@@ -233,7 +233,7 @@ theme and Cascading Style Sheets (CSS) statements.
 
 *Keywords:* `#conceptual` `#logical` `#physical` `#mandatory`
 
-Workspace as the foundation for creating mashups from widgets.
+Workspace as the foundation for creating mashups from apps.
 
 ### `<goal>`
 
@@ -304,14 +304,14 @@ URI to the workspace description of the previous design phase, i.e.
 
 *Parent element:* `<workspace>`
 
-### `<widget>`
+### `<app>`
 
 *Keywords:* `#logical` `#physical` `#mandatory`
 
-Definition of a widget in the workspace. The `<widget>` element can occur once or several times.
+Definition of an app in the workspace. The `<app>` element can occur once or several times.
 
  *Attributes:*
-`@id` Unique identifier of the widget is represented by a link to the widget within the workspace environment. This attribute is allowed
+`@id` Unique identifier of the app is represented by a link to the app within the workspace environment. This attribute is allowed
 to occur only in the physical phase.
 
 *Parent element:* `<workspace>`
@@ -320,29 +320,29 @@ to occur only in the physical phase.
 
 *Keywords:* `#logical` `#physical` `#mandatory`
 
-Type of the widget. Valid content values are: `map`, `voice`, `video`, `list`, `sms`, `chat` 
+Type of the app. Valid content values are: `map`, `voice`, `video`, `list`, `sms`, `chat` 
 
-*Parent element:* `<widget>`
+*Parent element:* `<app>`
 
 ### `<source>`
 
 *Keywords:* `#physical` `#mandatory`
 
-A URI linking to the widget source in a repository, e.g., the download location for a .wgt file or the location of an OpenSocial gadget.xml.
+A URI linking to the app source in a repository, e.g., the download location for a .wgt file or the location of an OpenSocial gadget.xml.
 
-*Parent element:* `<widget>`
+*Parent element:* `<app>`
  
 ### `<position>`
 
 *Keywords:* `#physical` `#mandatory`
 
-A textual placement hint for the widget consisting of one or both of the following keywords:
+A textual placement hint for the app consisting of one or both of the following keywords:
 - one of TOP, MIDDLE, BOTTOM for the vertical placement
 - one of LEFT, CENTER, RIGHT for the horizontal placement
 
 For example: "TOP LEFT", "BOTTOM", "MIDDLE CENTER"
 
-*Parent element:* `<widget>`
+*Parent element:* `<app>`
  
 ### `<capabilities>`
 
@@ -386,7 +386,7 @@ Optional specification of the minimal valid accuracy as a radius in meters the s
 
 *Keywords:* `#logical` `#physical` `#optional`
 
-Optional frame element containing rules or combination of rules associated to the mashup or contained widgets. 
+Optional frame element containing rules or combination of rules associated to the mashup or contained apps. 
 The `<ruleset>` element is optional, can be cascaded, i.e. the `<ruleset>` is allowed to have a `<ruleset>` child element, and can occur several times the 2. level (child level).
 
 *Attributes:*
