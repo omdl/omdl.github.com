@@ -145,7 +145,7 @@ theme and Cascading Style Sheets (CSS) statements.
 
       <app+ id="{UNIQUE-WIDGET-ID-IN-WORKSPACE}">
         <type>{MAP|VOICE|VIDEO|LIST|SMS|CHAT|...}</type>
-        <source>{HTTP-URI-TO-WIDGET-REPOSITORY}</source>
+        <link rel="source" href="{HTTP-URI-TO-WIDGET-REPOSITORY}" type="{WIDGET-CONTENT-TYPE}"/>
         <position>{TOP|MIDDLE|BOTTOM}{LEFT|CENTER|RIGHT}</position>
       </app>
 
@@ -188,17 +188,17 @@ theme and Cascading Style Sheets (CSS) statements.
       
       <app id="http://repo.omdl.org/mashups/alice/CallFromMap/1">
         <type>MAP</type>
-        <source>http://repo.omdl.org/apps/map/MyFancyMap</source>
+        <link rel="source" href="http://repo.omdl.org/apps/map/MyFancyMap" type="application/widget"/>
         <position>TOPLEFT</position>
       </app>
       <app id="http://repo.omdl.org/mashups/alice/CallFromMap/2">
         <type>LIST</type>
-        <source>http://repo.omdl.org/apps/list/ResultInfo</source>
+        <link rel="source" href="http://repo.omdl.org/apps/list/ResultInfo" type="application/widget"/>
         <position>TOPRIGHT</position>
       </app>
       <app id="http://repo.omdl.org/mashups/alice/CallFromMap/3">
         <type>VOICE</type>
-        <source>http://repo.omdl.org/apps/list/CallItForMe</source>
+        <link rel="source" href="http://repo.omdl.org/apps/list/CallItForMe" type="application/widget"/>
         <position>BOTTOMRIGHT</position>
       </app>
 
@@ -324,11 +324,13 @@ Type of the app. Valid content values are: `map`, `voice`, `video`, `list`, `sms
 
 *Parent element:* `<app>`
 
-### `<source>`
+### `<link rel="source" href="http://somewhere.com/" type="application/widget">`
 
 *Keywords:* `#physical` `#mandatory`
 
-A URI linking to the app source in a repository, e.g., the download location for a .wgt file or the location of an OpenSocial gadget.xml.
+Link to the app source in a repository, e.g., the download location for a .wgt file or the location of an OpenSocial gadget.xml.
+
+For W3C Widgets, the `type` attribute is `application/widget`; for OpenSocial it is `application/vnd-opensocial+xml`.
 
 *Parent element:* `<app>`
  
