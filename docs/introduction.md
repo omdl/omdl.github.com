@@ -142,6 +142,8 @@ theme and Cascading Style Sheets (CSS) statements.
       <creator>{HTTP-URI-TO-USER-PROFILE}</creator>     
       <date>{DATETIME^^xsd:dateTime}</date>  
       <source>{HTTP-URI-TO-DOCUMENT-OF-THE-PREVIOUS-DESIGN-PHASE}</source>
+      <thumbnail>{HTTP-URI-TO-THUMBMAIL-IMAGE}</thumbnail>
+      <screenshot>{HTTP-URI-TO-SCREENSHOT-IMAGE}</screenshot>
 
       <app+ id="{UNIQUE-WIDGET-ID-IN-WORKSPACE}">
         <type>{MAP|VOICE|VIDEO|LIST|SMS|CHAT|...}</type>
@@ -465,3 +467,19 @@ Optional URI the mashup has to be archived to before automatic removal at deadli
 `@type` Type of the location; in most caes 'archive'. The value is a string.
 
 *Parent element:* `<phaseout>`
+
+### `<screenshot>`
+
+*Keywords:* `#phyiscal` `#optional`
+
+Optional string that gives the URL of a screenshot of the mashup in use. This must be an image on a public web site that is not blocked by robots.txt. PNG is the preferred format, though GIF and JPG are also acceptable.
+
+*Parent element:* `<workspace>`
+
+### `<thumbnail>`
+
+*Keywords:* `#phyiscal` `#optional`
+
+Optional string that gives the URL of a thumbnail image or icon to display for the mashup. This must be an image on a public web site that is not blocked by robots.txt. PNG is the preferred format, though GIF and JPG are also acceptable.
+
+*Parent element:* `<workspace>`
