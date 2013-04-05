@@ -147,6 +147,7 @@ theme and Cascading Style Sheets (CSS) statements.
 
       <app+ id="{UNIQUE-WIDGET-ID-IN-WORKSPACE}">
         <type>{MAP|VOICE|VIDEO|LIST|SMS|CHAT|...}</type>
+        <identifier?>{IRI-OF-APP}</identifier>
         <link rel="source" href="{HTTP-URI-TO-WIDGET-REPOSITORY}" type="{WIDGET-CONTENT-TYPE}"/>
         <position>{TOP|MIDDLE|BOTTOM}{LEFT|CENTER|RIGHT}</position>
       </app>
