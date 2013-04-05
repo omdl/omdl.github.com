@@ -335,6 +335,14 @@ Link to the app source in a repository, e.g., the download location for a .wgt f
 For W3C Widgets, the `type` attribute is `application/widget`; for OpenSocial it is `application/vnd-opensocial+xml`.
 
 *Parent element:* `<app>`
+
+### `<identifier>`
+
+*Keywords:* `#physical` `#optional`
+
+Optional identifier for the app, typically an IRI in the cae of W3C widgets. An identifier can be used to locate an app within an existing environment or download from a marketplace, rather than using a specific download link. This is optional as not all widgets have identifiers.
+
+*Parent element:* `<app>`
  
 ### `<position>`
 
