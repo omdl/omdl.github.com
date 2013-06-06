@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Open Mashup Description Language: Community</title>
+    <meta name="description" content="OMDL is a simple way to export mashups consisting of pages, layouts and widgets for use in other applications. For example, OMDL can be used to export a profile page or a workspace from a portal or social network and import it into another.">
+    <meta name="author" content="Scott Wilson">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41284508-1', 'omdl.org');
+  ga('send', 'pageview');
+
+</script>
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link href="omdl.css" type="text/css" rel="stylesheet" />
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+  
+      <div class="container">
+      
+        <div class="navbar">
+            <div class="navbar-inner">
+              <div class="container">
+                <a class="brand" href="index.html"><img src="logo_no_strapline_sm_white.png"></a>
+                <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="introduction.html">About</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+                <li class="active"><a href="community.html">Community</a></li>
+                <li><a href="supporters.html">Supporters</a></li>
+                <li><a href="licensing.html">Licensing</a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+
+
+        <div class="page-header">
+          <h1>OMDL Community</h1>
+        </div>
+        <div class="row">
+          <div class="span7">
+          
+            <h2>An Interview with Paul Sharples – University of Bolton</h2>
+          	
+            <p class="interview-q">How have you been involved in implementing or deploying systems that make use of widgets?</p>
+            <p>Back in 2007 while working on the IST European funded TENCompetence Project, I was involved in implementing some software based on the IMS Learning Design specification. Working with a set of of both existing tools and newly developed components, our remit was to improve and extend the runtime tools we had.  When 'playing' or running a Learning Design (a.k.a a Unit of Learning), a student generally navigates through a specified sequence of tasks and activities.  At various points the student may be guided by a teacher or directed to use a service or tool.</p>
+            
+            <p>The Learning Design specification is quite vague in describing what these services or tools can actually be. The specification only defines four types of service; 'Conference', 'Monitor', 'Send Mail' and 'Index Search'.  Practically speaking, services which users may want to use may include things like chat, forums, video conferencing; or any other tool that we haven't yet thought of . So one specific task at hand was to try and realize how to improve the runtime services offered within Learning Designs and marry the specification to something more concrete.  So was born the Wookie W3C Widget engine, which later became Apache Wookie.  The Wookie engine was a standalone component which could allow the delivery of any W3C Widget compliant package.  The Widgets themselves could be pretty much any type of widget one could think of and because the Wookie engine allows users to add new widgets, it is also extensible.  So the first deployment system to make use of the Wookie Widgets was an open source Learning Design runtime system called Coppercore. Using parts of this together with tailored new web interfaces, were we able to tie the W3C widgets to instances of services found within Learning Designs.  Further to this, the team started to develop new Wookie plugins for other platforms and not just Learning Design based platforms.</p>
+            
+            <p>Plugins were created for Elgg, Drupal and LAMs among others.  This meant that Wookie could be used in different environments where widgets were required.  Later I also worked on the integration of Apache Wookie within Apache Rave. Rave is a mashup social platform which among other things, allows users to aggregate pages of widget content, using both Open Social and W3C specifications.</p>
+            
+            <p class="interview-q">The main focus of current work is OMDL, which represents and delivers collections of widgets to platforms which implement the specification. How have you been involved in its implementation in Moodle and what has this work entailed?</p>
+            
+            <p>Having already implemented the OMDL import and export in Apache Rave during Omelette, I was asked to implement this feature in another platform.  The platform we used was Moodle. Although someone had already written a 'block' plugin which rendered Wookie widgets in a Moodle block, we would need something which could render lots of widgets together within Moodle. Rather than just directly mimic how Apache Rave rendered a page of widgets on screen, I began to look for another drag and drop widget framework on which to build a new course format within Moodle. Eventually I decided to use the javascript Gridster framework.  This library is based on the jQuery family of libraries and offered a very nice and responsive container in which to render widgets together. </p>
+            
+            <p>The resulting Moodle course format is called 'Mashup' and allows users to create tabbed pages of aggregated widget content within Moodle, comprising of various rows and columns which are displayed in the center of main area of the screen. Behind the new course format, apart from Moodle itself, Apache Wookie and Apache Shindig are the other two components which are required to render W3C widgets and Open Social gadgets respectively.</p>
+            
+            <p>With the user interface in place, the next task was to add the OMDL import and export functionality. For this I wrote the logic in php (which Moodle uses) based on the code found in the Rave implementation (originally written in Java). Adding in additional API calls from the User Interface I was able to export and import pages of aggregated widgets using OMDL.</p>
+            
+            <p class="interview-q">Given your experience in working with portal systems, widgets and now OMDL how do you see the prospects for further use in the future?</p>
+            <p>I think the prospects are in the use of OMDL as a way of describing widget aggregation and so more users taking advantage of this to describe their own mashups.  I've been thinking of the OMDL specification more along the lines of a transport mechanism, analogous to the IMS Content Packaging Specification.  In this respect users can create their package of material and share it with others.  Users can then reuse the content or decide to change or alter it slightly.</p>
+            
+            <p>In terms of OMDL, the changes can be made by loading the OMDL file into an OMDL supported platform and adding/removing content or updating the layout and then re-exporting it.  Alternatively, users may wish to publish widget content anywhere that is accessible from the internet and then reference it in their own OMDL file which others could re-use.</p>
+            
+            <p>As far as support for OMDL in new platforms, both the Java and php implementations are now open sourced and available to other developers.</p>
+            
+            <p class="interview-q">If other Moodle using institutions wanted to implement OMDL and a dashboard facility how easy is it for them to do? Will the work you have done be made available to the wider Moodle community?</p>
+            
+            <p>It should be relatively straightforward for other users and/or institutions to make use of the Moodle Mashup plugin. The code can be found at <a href="https://github.com/ps3com/mashup-doodle">https://github.com/ps3com/mashup-doodle</a>, along with installation instructions.</p>
+
+
+
+          </div>
+          <div class="span5">
+          <div class="sidebar">
+            <h3>Quick links</h3>
+            <p><a href="http://groups.google.com/group/omdl">OMDL Mailing List</a></p>
+            <h3>Community Interviews</h3>
+            <p><a href="wilson.html">Scott Wilson – OSSWatch</a></p>
+            <p><a href="allott.html">Nick Allott – Webinos</a></p>
+            <p>Paul Sharples – University of Bolton</p>
+          </div>
+          </div>
+        </div>
+
+
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
