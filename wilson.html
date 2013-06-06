@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Open Mashup Description Language: Community</title>
+    <meta name="description" content="OMDL is a simple way to export mashups consisting of pages, layouts and widgets for use in other applications. For example, OMDL can be used to export a profile page or a workspace from a portal or social network and import it into another.">
+    <meta name="author" content="Scott Wilson">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41284508-1', 'omdl.org');
+  ga('send', 'pageview');
+
+</script>
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link href="omdl.css" type="text/css" rel="stylesheet" />
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+  
+      <div class="container">
+      
+        <div class="navbar">
+            <div class="navbar-inner">
+              <div class="container">
+                <a class="brand" href="index.html"><img src="logo_no_strapline_sm_white.png"></a>
+                <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="introduction.html">About</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+                <li class="active"><a href="community.html">Community</a></li>
+                <li><a href="supporters.html">Supporters</a></li>
+                <li><a href="licensing.html">Licensing</a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+
+
+        <div class="page-header">
+          <h1>OMDL Community</h1>
+        </div>
+        <div class="row">
+          <div class="span7">
+          
+            <h2>An Interview with Scott Wilson</h2>
+          	
+            <p class="interview-q">How have you been involved in implementing or deploying systems that make use of widgets?</p>
+            <p>I’ve been using widgets mainly as a handy way of quickly putting together a set of functionality to see if that meets a need. But I’ve also been involved in the implementation of the specification for widgets. I worked with the <a href="http://www.w3.org/2008/webapps/">W3C Web Apps Working group</a> on developing the standards, and also contribute to the development of an open source implementation, <a href="http://wookie.apache.org/">Apache Wookie.</a></p>
+            
+            <p class="interview-q">Widgets have been around for some years now. How do you see their role in the evolving ecology of software and hardware systems?</p>
+            <p>When we started work on W3C widgets we saw them within the desktop paradigm, as part of a collection of functionality in the Windows sidebar, or dashboard, or things like Yahoo Konfabulator. As time moved on it seemed that they might be more applicable as single applications in the hardware domain, in mobiles and TV, and more recently for in-car applications. Whereas with Wookie we were mainly looking at use in portals and websites. So there are several quite different ecologies for widgets.</p>
+            
+            <p class="interview-q">How do you see that panning out?</p>
+            <p>I think they [multiple ecologies] are viable. The general feeling is that most device applications will eventually be HTML apps of one sort or another, whichever specifications win out. This is a very significant area, whereas what I see happening in multi widget applications is rather more niche, and focused on the enterprise. There are particular organisations which are interested in that area, but I don't think it will have the big impact [on consumers] that the single application world has. Which is why it is in the single application world that we are seeing the standards wars, whereas in the multi widget portal space its relatively uneventful.</p>
+            
+            <p class="interview-q">Could you give some examples of the kinds of standards wars you are talking about?</p>
+            <p>The <a href="http://developer.chrome.com/apps/about_apps.html">Chrome Packaged Apps</a> group developed a proprietary spec for packaged web applications, which is pretty much functionally identical to what anyone else does. <a href="https://wiki.mozilla.org/B2G">Mozilla Boot2Gecko</a> has its own spec. Opera use W3C. There are any number of other specs from other consortia particularly in the mobile space. Google and Mozilla in particular have been forging their own path, I think because they want to have their stamp of presence on such a big market. There has been very little interest in coming together, even on aspects which are readily commodifiable. Even zip formats they disagree about! And they disagree on metadata even though it is 90% the same. The only reason you'd do that is either through ignorance, which I think is unlikely, or because by making sure that your apps are not interoperable that you are able to carve out some area of the space for yourself and your platforms. It may be a little easier for people to stomach this in a consumer area, because they already accept the proprietary systems of Apple and Microsoft. But in the enterprise space I think there is rather less tolerance for systems that don't interoperate.</p>
+            
+            <p class="interview-q">How have you been involved in the development of OMDL or its implementations in systems?</p>
+            <p>I was involved initially in setting up the OMDL infrastructure and community following the <a href="http://www.openwebfoundation.org/">Open Web Foundation</a> set up, using the OWFa license and so on. So my initial main involvement was ensuring that the governance and legal aspects of OMDL were solid, and could be built on. I have been less involved technically, mainly making sure that community contributions were being incorporated.</p>
+            
+            <p class="interview-q">Who do you think can benefit from OMDL and what does it offer them?</p>
+            <p>The principal beneficiaries of OMDL are going to be in the enterprise, organisations that have invested in portal platforms, intranets, dashboards, and so on, but may not have standardised on a single system. If these organisations gather a set of widgets to perform a function, like providing a set of analytic tools, or doing visualisations for CRM or financial systems, then they will want to share that with other work groups, or tweak it for a different configuration for a different vertical in that same company. That will need something like OMDL as a language of exchange between these various kinds of portal platforms. You can take a screen that is working for you out of liferay and import it at least functionally into <a href="http://rave.apache.org/">Apache Rave</a>, with the same widgets and roughly the same sort of configuration. You are not forced to standardise on the platform, you can standardise on configurations. I would see this as being mostly inward facing, so if you have a good setup for sales, you may want to share that with other departments, even ones that are selling different products in different markets.</p>
+            
+            <p class="interview-q">We have moved quite a long way from the end users configuring their own environment here, haven’t we?</p>
+            <p>I think so, but maybe that is inevitable in enterprise systems. A company I used to work at made the distinction between data analysts and ‘data tourists’. Data Tourists are the people who consume analytics which are useful to their job from a “canned” dashboard; the dashboard has been constructed by an analyst, who has decided on the configuration needed for this application, what databases they need to be talking to, and so on. The data tourist doesn’t necessarily want to configure that environment themselves. In most platforms you are free to do so, but it is good to have a starting point so that at least you are looking at the right figures!</p>
+            
+            <p class="interview-q">What needs to happen to lead OMDL to adoption?</p>
+            <p>The first thing is that platforms need to actually integrate the spec. The option of using it needs to be made available, and that means having enough support from widely deployed systems in place. In order to get to that point, the benefits of having OMDL incorporated into products need to be communicated clearly. If users don’t ask for it, developers aren't interested, and implementation doesn't follow. This follows the general pattern with interoperability. Once you see that OMDL enables you to take a page in your CMS or your portal, export it, import it somewhere else, then when you can't do that with another platform you notice the problem. There is something missing there that should be there. But if you have never had that experience of doing that interoperability then you won’t be aware of the benefits, or complain when that option is cut off from you. Once a few enterprises that have enough presence in the market see a benefit, then standardisation follows.</p>
+            
+            <p class="interview-q">Do you think any changes or further developments are needed to the specification itself to make a more convincing case for the functionality?</p>
+            <p>Not really. Rather than adding capabilities and features, I'd say the first hurdle is making it simple enough to get adopted, and then ensuring that adoption happens by explaining the benefits. Features are relatively easy to add when someone has already committed to implementing the spec, and it can wait until users are making requests.</p>
+            
+            <p class="interview-q">At the moment there is no reference to inter-widget communication (IWC) in OMDL. How would you see IWC being handled in relation to the delivery of dashboards?</p>
+            <p>Basically you have two kinds of models for user interface mashups, which is another way of thinking of what OMDL does. An orchestrated approach predefines inter-widget communication. Someone has sat down and decided that widget A needs to talk to widget B about topic C and designed this into the system. To do that then you would need some declarative language. Choreography is a different approach, where the interaction between widgets and their communication is more emergent. Widgets have an existing set of channels that they know how to talk and receive on, but no one has set out the wiring between them. If widget A and widget B are in the same space then they will communicate on topic C, because that is what they do. In that case there isn't really anything that OMDL needs to say about it. Once the widgets are in the same environment, they will begin communicating because they are designed to do that.</p>
+            
+            <p class="interview-q">So OMDL is making a decision to support choreography rather than orchestration?</p>
+            <p>Yes, in part because it is the simpler approach, and doesn’t require users to know about the integration. You can rely on existing mechanisms like Open Ajax to convey all the messaging. You can rely on the widget designers to put in some functionality. And you can rely on the developer community to cohere around useful topics for IWC. The downside, of course, is that there are limits to the kind of integration that you can achieve without doing a lot of customisation to the widgets themselves, so that they are designed to work together. And once you do that they are less modular and reusable. So there is an argument for going the orchestration route. There are challenges for that though. You have to write a clear spec which is implemented in multiple system. Orchestration also requires a different sort of developer, interested in that sort of integration.</p>
+            
+            <p class="interview-q">I suppose also there is no reason why an orchestration spec should not exist in parallel with OMDL. If someone wants to create it they can do so.</p>
+            <p>Yes, it could be a completely separate language to OMDL itself, which might make it easier to debug. OMDL at least provides you with the context, identifying the widgets or apps in the space that you could build on with the orchestration language, and at the moment it seems more feasible to get this first step done. IWC has great potential, but it has taken a long while to get user awareness. Even when it exists in a workspace it is actually quite hard to communicate that to the users, and we are still looking at ways of making IWC more comprehensible to users.</p>
+            
+            <p class="interview-q">That links to your comments about the shift in the use of widgets away from end user mashups.</p> 
+            <p>For single applications IWC doesn't make much sense.
+The enterprise case is where IWC makes more sense. The question is how much of that can emerge from understanding common topics in a workspace and having a common mechanism for publish and subscribe events, like Open Ajax Hub, and how much needs to be pre-designed. I suspect, though, that as we go deeper into the enterprise use cases orchestration may become more important. But we are not there just yet.</p>
+
+          </div>
+		  <div class="span5">
+          <div class="sidebar">
+            <h3>Quick links</h3>
+            <p><a href="http://groups.google.com/group/omdl">OMDL Mailing List</a></p>
+            <h3>Community Interviews</h3>
+            <p>Scott Wilson – OSSWatch</p>
+            <p><a href="allott.html">Nick Allott – Webinos</a></p>
+            <p><a href="sharples.html">Paul Sharples – University of Bolton</a></p>
+          </div>
+          </div>
+        </div>
+
+
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
