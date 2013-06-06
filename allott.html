@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Open Mashup Description Language: Community</title>
+    <meta name="description" content="OMDL is a simple way to export mashups consisting of pages, layouts and widgets for use in other applications. For example, OMDL can be used to export a profile page or a workspace from a portal or social network and import it into another.">
+    <meta name="author" content="Scott Wilson">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41284508-1', 'omdl.org');
+  ga('send', 'pageview');
+
+</script>
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link href="omdl.css" type="text/css" rel="stylesheet" />
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+  
+      <div class="container">
+      
+        <div class="navbar">
+            <div class="navbar-inner">
+              <div class="container">
+                <a class="brand" href="index.html"><img src="logo_no_strapline_sm_white.png"></a>
+                <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="introduction.html">About</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+                <li class="active"><a href="community.html">Community</a></li>
+                <li><a href="supporters.html">Supporters</a></li>
+                <li><a href="licensing.html">Licensing</a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+
+
+        <div class="page-header">
+          <h1>OMDL Community</h1>
+        </div>
+        <div class="row">
+          <div class="span7">
+          
+            <h2>An Interview with Nick Allott – Webinos</h2>
+          	
+            <p class="interview-q">How have you been involved in using widgets?</p>
+            <p>I was involved in the widget specification process from the outset, attended all the W3C meetings, and involved in the BONDI project, in uptake and community, Webinos, and lots of proprietary implementations using widgets on mobile devices. So I am relatively au fait with widget technology!</p>
+            
+            <p class="interview-q">OMDL is a specification for combining widgets into dashboards, so its success depends on the adoption of interoperable widgets. How do you place of widgets in the evolving ecology of hardware and software systems?</p>
+            <p>The potential is massive, but the commercial reality is quite complicated. It’s easiest to see in the context of web based applications. It is fairly obvious that you need something like what widget specs specify, but almost every major player that is rolling out web application technology is using a proprietary implementation. That’s not because the widget specification is insufficient, it's because they nearly all have their own commercial aspirations to build up their own ecosystems. This would apply to Google, to Firefox Mozilla, WebOS and others.</p>
+            
+            <p class="interview-q">Is there still a space still for interoperable widget specifications like W3C?</p>
+            <p>Yes, there is definitely a space for it. I’m just underlining some of the challenges in terms of achieving adoption, and that the barriers are not technical, they are entirely commercial.</p>
+            
+            <p class="interview-q">So where is that space, if it isn’t to become the standard whereby those big players operate? Where are the niches where there are opportunities?</p>
+            <p>Possibly the enterprise sector. And anyone who isn’t one of the big players will need something a bit more inclusive, particularly for device technology with widgets. Anyone who wants to break the oligopoly of iPhone and Android has to create an application interface system and doing that from scratch is almost impossible at the moment. The only way you can really do it is to embrace web technologies, and that’s why Mozilla has done, Samsung, Intel, and so on. So what you'd hope to achieve is to persuade any of those to embrace the standardised packaging mechanism, and or any of the players that sit along side them.</p>
+            
+            <p>The reason it is so commercially important is that the application packaging mechanism, which is what a widget is, can tie directly exclusively and monopolistically to an application store. And people love to force all of the app sales to go through their store, so that they can make more money. So if you skew the standard, but still use the Web as the application development technology but package it differently, then you funnel all of the App shared revenue through your store.</p>
+            
+            <p class="interview-q">Is there a coalition of people who are actively supporting the W3C approach, and if so who are they?</p>
+            <p>Yes but they are very loose, badly organised, and mostly individuals. That is part of the problem, the challenges and opportunities with respect to this kind of technology have not been well explained, communicated to the people whose interests need to be aligned.</p>
+            
+            <p class="interview-q">What would be the natural forum for that to happen in?</p>
+            <p>I think W3C is the natural place for that to happen. They try to do that, through the <a href="http://www.w3.org/2008/webapps/">Web Applications Working Group.</a> The challenge is that their biggest paymasters by membership fees are exactly the same people who are playing a double faced game.</p>
+            
+            <p class="interview-q">It sounds that promoting interoperable widget technology more enthusiastically won't help.</p>
+            <p>It is a long game. It will become apparent over a three to five year period exactly what is happening here, and people will slowly understand the importance of it. And part of playing the long game is slowly and insistently beating the drum people will gather round the cause, as it were.</p>
+            
+            <p class="interview-q">Can you describe how Webinos uses widgets, and if OMDL and Rave could be useful to Webinos?</p>
+            <p>Most of the work we have done on widgets in Webinos is in the context of wrapping an application for execution on a device in a connected or unconnected state. It is very device oriented, while OMDL and Rave are more server oriented in execution. There is a big difference between, on the one hand, a widget which is essentially a packaged web application with an <em>index.hml</em> as a start page, and on the other a background service where the background service has no UI to speak of, only a Javascript entry point. Webinos uses widgets in the second of those ways, so that it can run persistently in the background, either on a device or on a server. That is using widgets for something that they weren't really designed for but they seem perfectly fit for purpose. Webinos also creates a virtualised network that allows any widget on any device to connect to the services running on any other device. If I had a phone in my house and you had a tv in your house, my phone could magically find your tv and I could watch your programmes. What we need is a generic editing framework that allows us to plug together those services in new and complex ways. As I understand that Rave and the Omelette project do that using REST interfaces and communication. That is fine, but a lot of our communication modalities, we need a more symmetric communication model. Although we can map to REST, our communication is much more efficient if it uses JSON RPC over a bidirectional channel. If we could use any of the UI editing components of a platform like <a href="http://www.ict-romulus.eu/web/mycocktail">MyCocktail</a>, but in addition to doing the binding by REST you could also do them by JSON RPC, that would be fantastic.</p>
+            
+            <p>The second aspect is that Webinos has some basic capability to wire up a widget on one device with some data and do some logic on it and put it somewhere else. As an example in home automation, we have a very basic single screen dashboard that allows you to see what the temperature is for every radiator in your house, what the boiler is, and how far open the valves are. We have a very simple mechanism whereby we can stipulate ‘if the temp drops by 15 degrees, start up the boiler, and open the valves’. You can see how a REST interface could be used for that, but if I orchestrate the logical flow that binds it all together, where does that flow reside? You can define it in a web page with java script, but if I want it to persist in the background, how do I do that? If I have defined my home heating algorithm, I need that to be persistent, so the logic has to continue working when the browser is closed. </p>
+            
+            <p class="interview-q">OMDL doesn’t support orchestration in the sense of setting out the logic of those relationships. When we talk about data flows between widgets in Rave, we talk about choreography, so that the communication between widgets emerges from a publish and subscribe model. The policy has been that rather than extending OMDL, we are better off keeping it quite thin, and to create a specification in parallel with that if we it proves necessary.</p>
+            <p>That’s a shame from the Webinos perspective, because the minute that you press close on the browser it’s all gone. It’s consistent in configuration, but you aren’t using the workflow in the background. That’s what we really want. There are other examples, health monitoring applications, which don’t need to be persistent. You could have a set of health metrics and devices that comes up with a report on your health. That fits the model of the context being a single use session. So we do have requirements such as you are describing, but from the Webinos perspective you quickly reach the requirement that the logic needs to run when the browser is closed.</p>
+            
+            <p class="interview-q">So from a Webinos perspective your feedback on OMDL is that an extension to be able to define orchestration within the specification would be an advantage?</p>
+            <p>Anything that helps the user to persist a workflow in the background is a killer feature. We might do this in Webinos, but we would rather find it.</p>
+            
+            <p>The hope is that OMDL provides a context where this could be done.</p>
+
+
+          </div>
+          <div class="span5">
+          <div class="sidebar">
+            <h3>Quick links</h3>
+            <p><a href="http://groups.google.com/group/omdl">OMDL Mailing List</a></p>
+            <h3>Community Interviews</h3>
+            <p><a href="wilson.html">Scott Wilson – OSSWatch</a></p>
+            <p>Nick Allott – Webinos</p>
+            <p><a href="sharples.html">Paul Sharples – University of Bolton</a></p>
+          </div>
+          </div>
+        </div>
+
+
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
