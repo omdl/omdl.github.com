@@ -14,4 +14,30 @@
            -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
                 box-shadow: 0 1px 2px rgba(0,0,0,.15);
       }
+      
+       .sidebar {
+          background-color: #dfdfdf;
+        padding: 10px;
+        -webkit-border-radius: 6px 6px 6px 6px;
+           -moz-border-radius: 6px 6px 6px 6px;
+                border-radius: 6px 6px 6px 6px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+                box-shadow: 0 1px 2px rgba(0,0,0,.15);
+      }
+      
+      h2 {
+	      margin-bottom: 21px;
+      }
+      
+      h3 {
+	      margin-bottom: 14px;
+      }
+      
+      .interview-q {
+	      font-size: 16px;
+	      font-weight: bold;
+	      font-style: italic;
+	      line-height: 21px;
+      }
 
