@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Open Mashup Description Language: An introduction for technical directors</title>
+    <meta name="description" content="OMDL is a simple way to export mashups consisting of pages, layouts and widgets for use in other applications. For example, OMDL can be used to export a profile page or a workspace from a portal or social network and import it into another.">
+    <meta name="author" content="Scott Wilson">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41284508-1', 'omdl.org');
+  ga('send', 'pageview');
+
+</script>
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+  
+      <div class="container">
+      
+        <div class="navbar">
+            <div class="navbar-inner">
+              <div class="container">
+                <a class="brand" href="index.html"><img src="logo_no_strapline_sm_white.png"></a>
+                <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="introduction.html">About</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="supporters.html">Supporters</a></li>
+                <li><a href="licensing.html">Licensing</a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+
+        <div class="page-header">
+          <h1>Open Mashup Description Language: An Introduction for Technical Directors/h1>
+        </div>
+        
+        <div class="row">
+          <div class="span8">
+            <h2>What is OMDL?</h2>
+            <p>OMDL is a simple way to export mashups consisting of pages, layouts and widgets for use in other applications. For example, OMDL can be used to export a profile page or a workspace from a portal or social network and import it into another.</p>
+            
+            <h2>Why should platforms support OMDL?</h2>
+            <p>OMDL provides users with a way to share widget-based page layouts, such as dashboards, so that they can be readily imported and reused elsewhere. As described in the <a href="overview.html">strategic overview</a>. This is useful for organisations that have multiple platforms, or where there are multiple servers running portals. OMDL provides a way for users to create mashup "templates" that can be shared with other users and across platforms. </p>
+            
+            <h2>How does OMDL relate to other specifications?</h2>
+            <p>TOMDL describes the structure of a page that includes widgets. Widgets can be W3C Packaged Web Apps, or OpenSocial Gadgets, or any other kind of widget supported by platforms. Where a specific widget format isn't supported, platforms can default to a native widget that performs a similar function.</p>
+<p>OMDL is in some ways similar to the native format that was used by Google for importing and exporting iGoogle tabs, however it is not tied to one particular platform.</p>
+
+            <h2>What's the status of the specification?</h2>
+            <p>At the time of writing, OMDL is still evolving, but is ready for implementation in platforms. Any platforms looking to implement the specification would be advised to join the OMDL group (it's free and open) to shape the future of the specification and ensure that any problems they encounter are addressed. OMDL itself is governed in a lightweight open fashion as an ASF-style meritocracy.</p>
+            
+            <h2>What is involved in adopting OMDL?</h2>
+            <p>For a detailed look at implementation, see the <a href="technical-intro.html">introduction for programmers</a>. However, in general terms what is needed is to provide an import and export function for platform pages where multiple widgets can be used. The export function turns the page structure into OMDL.</p>
+
+<p>An import function reads OMDL from a file and creates the page structure. 
+It is up to the platform developers whether they do a deep export that includes widget configuration and user preferences, or a more shallow export that just includes the layout and the types of widgets or gadgets involved but no user-specified configuration details. Platforms may also want to delegate such a decision to the user. 
+For example, a deep export of a workspace that includes a map widget could include the user preference to centre the map on Paris. With a shallow export, the widget will use its default location.</p>
+
+<p>OMDL doesn't actually include the widgets, only their metadata. This means that if the importing platform doesn't support a particular widget, they have the option of substituting something similar (for example, using an Open Street Map widget in place of a Google Maps widget), or importing the widget from a separate marketplace. (For example, the Apache Rave implementation of OMDL uses the marketplace set by the portal administrator to automatically find and install any widgets required for a workspace during import.)</p>
+
+
+          </div>
+          
+          <div class="span4">
+            <h3>OMDL implementations</h3>
+            <p><a href="http://rave.apache.org">Apache Rave</a></p>
+            <p><a href="http://graasp.epfl.ch">Graasp</a></p>
+            <h3>Related</h3>
+            <p><a href="http://ict-omelette.eu">OMELETTE project</a></p>
+            <p><a href="http://www.w3.org/TR/widgets/">W3C Widgets spec</a></p>
+            <p><a href="http://wookie.apache.org">Apache Wookie</a></p>
+          </div>
+        </div>
+
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
