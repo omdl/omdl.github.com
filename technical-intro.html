@@ -61,11 +61,33 @@
             
             <p>This short guide is intended as a quick start for developers who may be interested in creating and integrating OMDL functionality into their own applications.  At its core OMDL can be thought of as a sharing mechanism for aggregated widget content and its associated layout information, also known as a workspace. One OMDL enabled platform can export a particular workspace page while another OMDL enabled platform could import that page and recreate the layout and widget content so that it closely resembled the original.</p>
             
-            <p>At present OMDL uses an XML binding to describe the various parts of a workspace.  In practice there are some top level XML elements describing the workspace, together with a series of <code><app></code> elements which correspond to either a particular W3C widget or OpenSocial gadget. One of the first things your own application should be able to do is display widgets in a series of rows and columns. </p>
+            <p>At present OMDL uses an XML binding to describe the various parts of a workspace.  In practice there are some top level XML elements describing the workspace, together with a series of <pre><app></pre> elements which correspond to either a particular W3C widget or OpenSocial gadget. One of the first things your own application should be able to do is display widgets in a series of rows and columns. </p>
             
-            <p>This is because OMDL describes workspace layouts in a grid fashion and uses constructs such as <strong>TOP, MIDDLE, BOTTOM</strong> for vertical placement and <strong>LEFT, CENTER, RIGHT</strong> for horizontal placement.  The XML can also optionally describe a high level layout, i.e. THREE COLUMNS. Using a combination of these values can help ascertain the workspace layout. Exporting a workspace from your application is dependent on how you store the layout data locally, but should be trivial to do. One additional point of note is that when importing an OMDL instance, you may find that your local W3C widget repository does not contain one or more of the widgets referred to in the OMDL file.  When this is the case your application should use the href attribute of the <code><link></code> element to download and locally install that widget.</p>
+            <p>This is because OMDL describes workspace layouts in a grid fashion and uses constructs such as <strong>TOP, MIDDLE, BOTTOM</strong> for vertical placement and <strong>LEFT, CENTER, RIGHT</strong> for horizontal placement.  The XML can also optionally describe a high level layout, i.e. THREE COLUMNS. Using a combination of these values can help ascertain the workspace layout. Exporting a workspace from your application is dependent on how you store the layout data locally, but should be trivial to do. One additional point of note is that when importing an OMDL instance, you may find that your local W3C widget repository does not contain one or more of the widgets referred to in the OMDL file.  When this is the case your application should use the href attribute of the <pre><link></pre> element to download and locally install that widget.</p>
 
 <p>OMDL doesn't actually include the widgets, only their metadata. This means that if the importing platform doesn't support a particular widget, they have the option of substituting something similar (for example, using an Open Street Map widget in place of a Google Maps widget), or importing the widget from a separate marketplace. (For example, the Apache Rave implementation of OMDL uses the marketplace set by the portal administrator to automatically find and install any widgets required for a workspace during import.)</p>
+
+<h2>Essentials</h2>
+
+<ol>
+  <li>Ability to display rows & columns of widget content in your target platform.</li>
+  <li>XML processing<ul>
+    <li>Importing<br>Reading the top level <layout> element to ascertain the grid layout
+  	Read each <app> → <position> element to ascertain where in the grid to 		place a given widget (or also work out the overall layout if not already found) 		Downloading and installing missing widgets to you local widget repository</li>
+    <li>Exporting<br>
+  	Mapping your widgets and layout information in a given workspace into an OMDL XML instance. This depends on your local model/database structure</li>
+  </ul>
+  </li>
+</ol>
+
+<h2>Resources</h2>
+
+<p>Two implementations of OMDL processing can be found below, which could be used as a starting point when developing OMDL functionality in your own platform.</p>
+
+<ul>
+  <li>Java implementation (part of apache rave) <a href="http://svn.apache.org/repos/asf/rave/trunk/rave-components/rave-core/src/main/java/org/apache/rave/portal/model/util/omdl/">http://svn.apache.org/repos/asf/rave/trunk/rave-components/rave-core/src/main/java/org/apache/rave/portal/model/util/omdl/</a></li>
+  <li>Php implementation (part of the moodle mashup course format) <a href="https://github.com/ps3com/mashup-doodle/tree/master/classes/omdl">https://github.com/ps3com/mashup-doodle/tree/master/classes/omdl</a></li>
+</ul>
 
 
           </div>
