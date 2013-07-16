@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Open Mashup Description Language: A brief guide for programmers and developers</title>
+    <meta name="description" content="OMDL is a simple way to export mashups consisting of pages, layouts and widgets for use in other applications. For example, OMDL can be used to export a profile page or a workspace from a portal or social network and import it into another.">
+    <meta name="author" content="Scott Wilson">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41284508-1', 'omdl.org');
+  ga('send', 'pageview');
+
+</script>
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+  
+      <div class="container">
+      
+        <div class="navbar">
+            <div class="navbar-inner">
+              <div class="container">
+                <a class="brand" href="index.html"><img src="logo_no_strapline_sm_white.png"></a>
+                <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="introduction.html">About</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="supporters.html">Supporters</a></li>
+                <li><a href="licensing.html">Licensing</a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+
+        <div class="page-header">
+          <h1>Open Mashup Description Language: A Brief Guide for Programmers and Developers</h1>
+        </div>
+        
+        <div class="row">
+          <div class="span8">
+            
+            <p>This short guide is intended as a quick start for developers who may be interested in creating and integrating OMDL functionality into their own applications.  At its core OMDL can be thought of as a sharing mechanism for aggregated widget content and its associated layout information, also known as a workspace. One OMDL enabled platform can export a particular workspace page while another OMDL enabled platform could import that page and recreate the layout and widget content so that it closely resembled the original.</p>
+            
+            <p>At present OMDL uses an XML binding to describe the various parts of a workspace.  In practice there are some top level XML elements describing the workspace, together with a series of <code><app></code> elements which correspond to either a particular W3C widget or OpenSocial gadget. One of the first things your own application should be able to do is display widgets in a series of rows and columns. </p>
+            
+            <p>This is because OMDL describes workspace layouts in a grid fashion and uses constructs such as <strong>TOP, MIDDLE, BOTTOM</strong> for vertical placement and <strong>LEFT, CENTER, RIGHT</strong> for horizontal placement.  The XML can also optionally describe a high level layout, i.e. THREE COLUMNS. Using a combination of these values can help ascertain the workspace layout. Exporting a workspace from your application is dependent on how you store the layout data locally, but should be trivial to do. One additional point of note is that when importing an OMDL instance, you may find that your local W3C widget repository does not contain one or more of the widgets referred to in the OMDL file.  When this is the case your application should use the href attribute of the <code><link></code> element to download and locally install that widget.</p>
+
+<p>OMDL doesn't actually include the widgets, only their metadata. This means that if the importing platform doesn't support a particular widget, they have the option of substituting something similar (for example, using an Open Street Map widget in place of a Google Maps widget), or importing the widget from a separate marketplace. (For example, the Apache Rave implementation of OMDL uses the marketplace set by the portal administrator to automatically find and install any widgets required for a workspace during import.)</p>
+
+
+          </div>
+          
+          <div class="span4">
+            <h3>OMDL implementations</h3>
+            <p><a href="http://rave.apache.org">Apache Rave</a></p>
+            <p><a href="http://graasp.epfl.ch">Graasp</a></p>
+            <h3>Related</h3>
+            <p><a href="http://ict-omelette.eu">OMELETTE project</a></p>
+            <p><a href="http://www.w3.org/TR/widgets/">W3C Widgets spec</a></p>
+            <p><a href="http://wookie.apache.org">Apache Wookie</a></p>
+          </div>
+        </div>
+
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
